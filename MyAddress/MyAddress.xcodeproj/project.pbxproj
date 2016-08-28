@@ -15,7 +15,36 @@
 		485BC7601D707B54002BC7A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BC75D1D707B54002BC7A8 /* SettingsViewController.swift */; };
 		485BC7631D707B97002BC7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485BC7611D707B97002BC7A8 /* LaunchScreen.storyboard */; };
 		485BC7641D707B97002BC7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485BC7621D707B97002BC7A8 /* Main.storyboard */; };
+		485BC7721D708C60002BC7A8 /* MSLocationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 485BC7701D708C60002BC7A8 /* MSLocationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		485BC7751D708C60002BC7A8 /* MSLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */; };
+		485BC7761D708C60002BC7A8 /* MSLocationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		485BC77E1D71229C002BC7A8 /* MSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BC77D1D71229C002BC7A8 /* MSAddress.swift */; };
+		485BC7801D712DC3002BC7A8 /* MSLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BC77F1D712DC3002BC7A8 /* MSLocationService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		485BC7731D708C60002BC7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 485BC73A1D707AAE002BC7A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 485BC76D1D708C60002BC7A8;
+			remoteInfo = MSLocationKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		485BC77A1D708C60002BC7A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				485BC7761D708C60002BC7A8 /* MSLocationKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		485BC7421D707AAE002BC7A8 /* MyAddress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAddress.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +57,24 @@
 		485BC75D1D707B54002BC7A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		485BC7611D707B97002BC7A8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485BC7621D707B97002BC7A8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSLocationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		485BC7701D708C60002BC7A8 /* MSLocationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLocationKit.h; sourceTree = "<group>"; };
+		485BC7711D708C60002BC7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485BC77D1D71229C002BC7A8 /* MSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAddress.swift; sourceTree = "<group>"; };
+		485BC77F1D712DC3002BC7A8 /* MSLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSLocationService.swift; sourceTree = "<group>"; };
+		485BC7811D716AFE002BC7A8 /* MyAddress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAddress.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		485BC73F1D707AAE002BC7A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485BC7751D708C60002BC7A8 /* MSLocationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485BC76A1D708C60002BC7A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				485BC7441D707AAE002BC7A8 /* MyAddress */,
+				485BC76F1D708C60002BC7A8 /* MSLocationKit */,
 				485BC7431D707AAE002BC7A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				485BC7421D707AAE002BC7A8 /* MyAddress.app */,
+				485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +105,7 @@
 		485BC7441D707AAE002BC7A8 /* MyAddress */ = {
 			isa = PBXGroup;
 			children = (
+				485BC7811D716AFE002BC7A8 /* MyAddress.entitlements */,
 				485BC7661D707C19002BC7A8 /* app */,
 				485BC7671D707C19002BC7A8 /* controller */,
 				485BC7681D707C19002BC7A8 /* resources */,
@@ -97,7 +143,29 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		485BC76F1D708C60002BC7A8 /* MSLocationKit */ = {
+			isa = PBXGroup;
+			children = (
+				485BC7701D708C60002BC7A8 /* MSLocationKit.h */,
+				485BC7711D708C60002BC7A8 /* Info.plist */,
+				485BC77D1D71229C002BC7A8 /* MSAddress.swift */,
+				485BC77F1D712DC3002BC7A8 /* MSLocationService.swift */,
+			);
+			path = MSLocationKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		485BC76B1D708C60002BC7A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485BC7721D708C60002BC7A8 /* MSLocationKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		485BC7411D707AAE002BC7A8 /* MyAddress */ = {
@@ -107,15 +175,35 @@
 				485BC73E1D707AAE002BC7A8 /* Sources */,
 				485BC73F1D707AAE002BC7A8 /* Frameworks */,
 				485BC7401D707AAE002BC7A8 /* Resources */,
+				485BC77A1D708C60002BC7A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				485BC7741D708C60002BC7A8 /* PBXTargetDependency */,
 			);
 			name = MyAddress;
 			productName = MyAddress;
 			productReference = 485BC7421D707AAE002BC7A8 /* MyAddress.app */;
 			productType = "com.apple.product-type.application";
+		};
+		485BC76D1D708C60002BC7A8 /* MSLocationKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 485BC7791D708C60002BC7A8 /* Build configuration list for PBXNativeTarget "MSLocationKit" */;
+			buildPhases = (
+				485BC7691D708C60002BC7A8 /* Sources */,
+				485BC76A1D708C60002BC7A8 /* Frameworks */,
+				485BC76B1D708C60002BC7A8 /* Headers */,
+				485BC76C1D708C60002BC7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSLocationKit;
+			productName = MSLocationKit;
+			productReference = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -130,6 +218,17 @@
 					485BC7411D707AAE002BC7A8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8LEAJKRS3U;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					485BC76D1D708C60002BC7A8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8LEAJKRS3U;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -148,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				485BC7411D707AAE002BC7A8 /* MyAddress */,
+				485BC76D1D708C60002BC7A8 /* MSLocationKit */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +260,13 @@
 				485BC7641D707B97002BC7A8 /* Main.storyboard in Resources */,
 				485BC75F1D707B54002BC7A8 /* Assets.xcassets in Resources */,
 				485BC7631D707B97002BC7A8 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485BC76C1D708C60002BC7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +285,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		485BC7691D708C60002BC7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485BC7801D712DC3002BC7A8 /* MSLocationService.swift in Sources */,
+				485BC77E1D71229C002BC7A8 /* MSAddress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		485BC7741D708C60002BC7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 485BC76D1D708C60002BC7A8 /* MSLocationKit */;
+			targetProxy = 485BC7731D708C60002BC7A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		485BC7521D707AAE002BC7A8 /* Debug */ = {
@@ -275,13 +399,18 @@
 		485BC7551D707AAE002BC7A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyAddress/MyAddress.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8LEAJKRS3U;
 				INFOPLIST_FILE = MyAddress/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MyAddress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MyAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "531cafab-dc2b-4861-9578-f471e1697471";
+				PROVISIONING_PROFILE_SPECIFIER = "MyAddress Developer Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -289,14 +418,70 @@
 		485BC7561D707AAE002BC7A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyAddress/MyAddress.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8LEAJKRS3U;
 				INFOPLIST_FILE = MyAddress/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MyAddress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MyAddress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "531cafab-dc2b-4861-9578-f471e1697471";
+				PROVISIONING_PROFILE_SPECIFIER = "MyAddress Developer Profile";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		485BC7771D708C60002BC7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LEAJKRS3U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MSLocationKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MSLocationKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		485BC7781D708C60002BC7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8LEAJKRS3U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MSLocationKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MSLocationKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -319,6 +504,16 @@
 				485BC7561D707AAE002BC7A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		485BC7791D708C60002BC7A8 /* Build configuration list for PBXNativeTarget "MSLocationKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				485BC7771D708C60002BC7A8 /* Debug */,
+				485BC7781D708C60002BC7A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

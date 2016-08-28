@@ -10,8 +10,22 @@
 
 import Foundation
 
+let defaults = UserDefaults(suiteName: "group.makeschool.MyCurrentAddress")
+
+func isTimeZone() -> Bool {
+    var timeZone = false
+    if defaults?.object(forKey: "timezone") != nil {
+        timeZone = (defaults?.bool(forKey: "timezone"))!
+    } else {
+        timeZone = true
+    }
+    
+    return timeZone
+}
+
 func performUIUpdatesOnMain(updates: @escaping () -> Void) {
     OperationQueue.main.addOperation { 
            updates()
     }
 }
+

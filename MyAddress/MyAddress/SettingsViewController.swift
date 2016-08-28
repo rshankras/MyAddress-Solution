@@ -14,6 +14,7 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tzSwitch.isOn = isTimeZone()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +23,6 @@ class SettingsViewController: UITableViewController {
     }
     
     @IBAction func changeTZSwitch(_ sender: AnyObject) {
-        
+        defaults?.set(sender.isOn, forKey: "timezone")
     }
 }

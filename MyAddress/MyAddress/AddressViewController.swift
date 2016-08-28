@@ -8,11 +8,14 @@
 
 import UIKit
 import CoreLocation
+import MSLocationKit
 
 class AddressViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var addressLabel: UILabel!
+    
+    let defaults = UserDefaults(suiteName: "group.makeschool.MyCurrentAddress")
     
     var locationManager: CLLocationManager?
     
@@ -74,10 +77,10 @@ extension AddressViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         if locations.count > 0 {
-            let coordinate = locations[0].coordinate
-            
             performUIUpdatesOnMain {
-                self.addressLabel.text = String(coordinate.latitude.description + " " + coordinate.longitude.description )
+                MSLocationService.getAddress(location: locations.first!, callback: { (address) in
+                    self.addressLabel.text = address.addressBuilder(showTZ: isTimeZone())
+                })
                 self.activityIndicator.stopAnimating()
             }
             
