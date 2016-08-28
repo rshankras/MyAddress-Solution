@@ -20,6 +20,11 @@
 		485BC7761D708C60002BC7A8 /* MSLocationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		485BC77E1D71229C002BC7A8 /* MSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BC77D1D71229C002BC7A8 /* MSAddress.swift */; };
 		485BC7801D712DC3002BC7A8 /* MSLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BC77F1D712DC3002BC7A8 /* MSLocationService.swift */; };
+		486D65BC1D73070700F3F801 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486D65BB1D73070700F3F801 /* NotificationCenter.framework */; };
+		486D65BF1D73070700F3F801 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D65BE1D73070700F3F801 /* TodayViewController.swift */; };
+		486D65C21D73070700F3F801 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486D65C01D73070700F3F801 /* MainInterface.storyboard */; };
+		486D65C61D73070700F3F801 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 486D65B91D73070700F3F801 /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		486D65CC1D7322AF00F3F801 /* MSLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 485BC76D1D708C60002BC7A8;
 			remoteInfo = MSLocationKit;
+		};
+		486D65C41D73070700F3F801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 485BC73A1D707AAE002BC7A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 486D65B81D73070700F3F801;
+			remoteInfo = Widget;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +54,17 @@
 				485BC7761D708C60002BC7A8 /* MSLocationKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		486D65CA1D73070700F3F801 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				486D65C61D73070700F3F801 /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -63,6 +86,12 @@
 		485BC77D1D71229C002BC7A8 /* MSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAddress.swift; sourceTree = "<group>"; };
 		485BC77F1D712DC3002BC7A8 /* MSLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSLocationService.swift; sourceTree = "<group>"; };
 		485BC7811D716AFE002BC7A8 /* MyAddress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAddress.entitlements; sourceTree = "<group>"; };
+		486D65B91D73070700F3F801 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		486D65BB1D73070700F3F801 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		486D65BE1D73070700F3F801 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		486D65C11D73070700F3F801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		486D65C31D73070700F3F801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		486D65CB1D730D1700F3F801 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +110,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		486D65B61D73070700F3F801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486D65CC1D7322AF00F3F801 /* MSLocationKit.framework in Frameworks */,
+				486D65BC1D73070700F3F801 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +127,8 @@
 			children = (
 				485BC7441D707AAE002BC7A8 /* MyAddress */,
 				485BC76F1D708C60002BC7A8 /* MSLocationKit */,
+				486D65BD1D73070700F3F801 /* Widget */,
+				486D65BA1D73070700F3F801 /* Frameworks */,
 				485BC7431D707AAE002BC7A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +138,7 @@
 			children = (
 				485BC7421D707AAE002BC7A8 /* MyAddress.app */,
 				485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */,
+				486D65B91D73070700F3F801 /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +195,25 @@
 			path = MSLocationKit;
 			sourceTree = "<group>";
 		};
+		486D65BA1D73070700F3F801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				486D65BB1D73070700F3F801 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		486D65BD1D73070700F3F801 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				486D65CB1D730D1700F3F801 /* Widget.entitlements */,
+				486D65BE1D73070700F3F801 /* TodayViewController.swift */,
+				486D65C01D73070700F3F801 /* MainInterface.storyboard */,
+				486D65C31D73070700F3F801 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -176,11 +236,13 @@
 				485BC73F1D707AAE002BC7A8 /* Frameworks */,
 				485BC7401D707AAE002BC7A8 /* Resources */,
 				485BC77A1D708C60002BC7A8 /* Embed Frameworks */,
+				486D65CA1D73070700F3F801 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				485BC7741D708C60002BC7A8 /* PBXTargetDependency */,
+				486D65C51D73070700F3F801 /* PBXTargetDependency */,
 			);
 			name = MyAddress;
 			productName = MyAddress;
@@ -204,6 +266,23 @@
 			productName = MSLocationKit;
 			productReference = 485BC76E1D708C60002BC7A8 /* MSLocationKit.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		486D65B81D73070700F3F801 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 486D65C91D73070700F3F801 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				486D65B51D73070700F3F801 /* Sources */,
+				486D65B61D73070700F3F801 /* Frameworks */,
+				486D65B71D73070700F3F801 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = 486D65B91D73070700F3F801 /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -231,6 +310,16 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
+					486D65B81D73070700F3F801 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8LEAJKRS3U;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 485BC73D1D707AAE002BC7A8 /* Build configuration list for PBXProject "MyAddress" */;
@@ -248,6 +337,7 @@
 			targets = (
 				485BC7411D707AAE002BC7A8 /* MyAddress */,
 				485BC76D1D708C60002BC7A8 /* MSLocationKit */,
+				486D65B81D73070700F3F801 /* Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +357,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		486D65B71D73070700F3F801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486D65C21D73070700F3F801 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +392,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		486D65B51D73070700F3F801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486D65BF1D73070700F3F801 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,7 +408,23 @@
 			target = 485BC76D1D708C60002BC7A8 /* MSLocationKit */;
 			targetProxy = 485BC7731D708C60002BC7A8 /* PBXContainerItemProxy */;
 		};
+		486D65C51D73070700F3F801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 486D65B81D73070700F3F801 /* Widget */;
+			targetProxy = 486D65C41D73070700F3F801 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		486D65C01D73070700F3F801 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				486D65C11D73070700F3F801 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		485BC7521D707AAE002BC7A8 /* Debug */ = {
@@ -449,7 +571,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MSLocationKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MSLocationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -475,13 +597,49 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool..MSLocationKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MSLocationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		486D65C71D73070700F3F801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				DEVELOPMENT_TEAM = 8LEAJKRS3U;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MyAddress.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f735c076-ab5d-49b9-8170-11193421c725";
+				PROVISIONING_PROFILE_SPECIFIER = "Widget Developer Profile";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		486D65C81D73070700F3F801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				DEVELOPMENT_TEAM = 8LEAJKRS3U;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.MyAddress.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f735c076-ab5d-49b9-8170-11193421c725";
+				PROVISIONING_PROFILE_SPECIFIER = "Widget Developer Profile";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -514,6 +672,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		486D65C91D73070700F3F801 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				486D65C71D73070700F3F801 /* Debug */,
+				486D65C81D73070700F3F801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
